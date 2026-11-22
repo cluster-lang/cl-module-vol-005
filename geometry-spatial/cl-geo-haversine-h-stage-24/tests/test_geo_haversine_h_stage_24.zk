@@ -1,0 +1,13 @@
+// cl-geo-haversine-h-stage-24: Test Suite
+import "../hav_h_24.zk"
+
+fn test_run():
+    res := haversine_h_24(0.5)
+    diff := res - 6.0000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geo-haversine-h-stage-24!")

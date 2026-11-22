@@ -1,0 +1,7 @@
+// cl-geom-sdf-cylinder-stage-24: SDF Infinite Cylinder Radial Distance Stage 24
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sdf_cylinder_radius_24(px: float, py: float) -> float:
+    dist2 := px * px + py * py
+    return dist2 - 144.0000

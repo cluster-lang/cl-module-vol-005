@@ -1,0 +1,6 @@
+// cl-fixed-q10-6-to-int: Fixed-Point Q10-6 to Integer Truncation
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q10_6_to_int(x: int) -> int:
+    return x >> 6

@@ -1,0 +1,11 @@
+// cl-geom3d-capsule-contains-point: Test Suite
+import "../cap_pt.zk"
+
+fn test_cap_pt():
+    if capsule3d_contains_point([0.0, 0.0, 2.0], [0.0, 0.0, 0.0], [0.0, 0.0, 5.0], 1.0) != 1: sys_exit(1)
+    if capsule3d_contains_point([5.0, 0.0, 2.0], [0.0, 0.0, 0.0], [0.0, 0.0, 5.0], 1.0) != 0: sys_exit(1)
+    print("test_cap_pt passed")
+
+fn main():
+    test_cap_pt()
+    print("✓ All tests passed for cl-geom3d-capsule-contains-point!")

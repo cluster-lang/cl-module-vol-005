@@ -1,0 +1,6 @@
+// cl-geom-moller-trumbore-det-stage-69: Möller-Trumbore Determinant Stage 69
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn moller_trumbore_det_69(e1x: float, e1y: float, e1z: float, px: float, py: float, pz: float) -> float:
+    return (e1x*px + e1y*py + e1z*pz) * 69.0

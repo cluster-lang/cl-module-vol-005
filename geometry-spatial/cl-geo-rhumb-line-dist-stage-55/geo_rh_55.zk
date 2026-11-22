@@ -1,0 +1,6 @@
+// cl-geo-rhumb-line-dist-stage-55: Rhumb Line Squared Metric Stage 55
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn rhumb_dist_sq_55(dlat: float, dlon: float) -> float:
+    return (dlat * dlat + dlon * dlon) * 55.0

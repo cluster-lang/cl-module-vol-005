@@ -1,0 +1,11 @@
+// cl-fixed-q10-6-div: Test Suite
+import "../q10_6_div.zk"
+
+fn test_run():
+    res := q10_6_div(384, 128)
+    if res != 192: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q10-6-div!")

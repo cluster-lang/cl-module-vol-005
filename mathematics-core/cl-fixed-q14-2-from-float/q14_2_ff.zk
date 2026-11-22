@@ -1,0 +1,6 @@
+// cl-fixed-q14-2-from-float: Fixed-Point Q14-2 from Float Converter
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q14_2_from_float(f: float) -> int:
+    return int(f * 4.0)

@@ -1,0 +1,6 @@
+// cl-fixed-q16-16-lerp-exact: Q16.16 Fixed-Point Linear Interpolation
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q16_lerp(a: int, b: int, t: int) -> int:
+    return a + (((b - a) * t) >> 16)

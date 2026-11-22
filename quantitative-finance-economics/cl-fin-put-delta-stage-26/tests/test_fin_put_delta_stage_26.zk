@@ -1,0 +1,13 @@
+// cl-fin-put-delta-stage-26: Test Suite
+import "../put_dl_26.zk"
+
+fn test_run():
+    res := put_delta_26(0.6)
+    diff := res - -10.4000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fin-put-delta-stage-26!")

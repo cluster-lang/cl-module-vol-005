@@ -1,0 +1,10 @@
+// cl-geom-line-segment-intersection-stage-51 Package Manifest
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+name := "cl-geom-line-segment-intersection-stage-51"
+version := "0.1.0"
+description := "2D Orientation Cross Determinant Stage 51"
+main := "gm_or_51.zk"
+license := "CCFL-2.0"
+author := "zk-mohammad <ZaidKhan-alamgir@proton.me>"

@@ -1,0 +1,7 @@
+// cl-geom3d-plane-plane-angle-cos: Cosine of Angle Between Two 3D Planes
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn planes_cos_angle(p1: vector[float], p2: vector[float]) -> float:
+    dot := p1[0]*p2[0] + p1[1]*p2[1] + p1[2]*p2[2]
+    return dot

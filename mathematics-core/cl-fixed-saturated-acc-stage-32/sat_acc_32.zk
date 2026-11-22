@@ -1,0 +1,9 @@
+// cl-fixed-saturated-acc-stage-32: Saturated Integer Accumulator Stage 32
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sat_acc_32(a: int, b: int) -> int:
+    sum := a + b
+    if sum > 32000: return 32000
+    if sum < (0 - 32000): return (0 - 32000)
+    return sum

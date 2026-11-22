@@ -1,0 +1,6 @@
+// cl-geno-needleman-score-gap-stage-6: Needleman-Wunsch Alignment Gap Penalty Stage 6
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn nw_gap_6(prev: int, gap_penalty: int) -> int:
+    return (prev - gap_penalty) + 6

@@ -1,0 +1,13 @@
+// cl-frustum: Test Suite
+import "../frustum.zk"
+
+fn test_frustum():
+    // Bounding volume [0, 100] on all axes
+    if frustum_point_in_bounds(50, 50, 50, 0, 100, 0, 100, 0, 100) != 1: sys_exit(1)
+    if frustum_point_in_bounds(150, 50, 50, 0, 100, 0, 100, 0, 100) != 0: sys_exit(1)
+    if frustum_sphere_in_bounds(-5, 50, 50, 10, 0, 100, 0, 100, 0, 100) != 1: sys_exit(1) // Overlaps min_x
+    print("test_frustum passed: 3D frustum culling tests verified")
+
+fn main():
+    test_frustum()
+    print("✓ All tests passed for cl-frustum!")

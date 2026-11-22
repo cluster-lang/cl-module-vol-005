@@ -1,0 +1,6 @@
+// cl-fixed-q15-to-float: Q15 to Normalized Float [-1.0, 1.0]
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q15_to_float(x: int) -> float:
+    return float(x) / 32768.0

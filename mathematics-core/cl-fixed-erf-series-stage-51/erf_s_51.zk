@@ -1,0 +1,7 @@
+// cl-fixed-erf-series-stage-51: Gauss Error Function Series Stage 51
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn erf_series_51(x: float) -> float:
+    x3 := x * x * x
+    return (1.1284 * (x - x3 * 0.3333333)) * 51.0

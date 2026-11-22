@@ -1,0 +1,13 @@
+// cl-geom-rtree-union-min-stage-9: Test Suite
+import "../rt_min_9.zk"
+
+fn test_run():
+    res := rtree_union_min_9(9.0, 14.0)
+    diff := res - 9.0000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geom-rtree-union-min-stage-9!")

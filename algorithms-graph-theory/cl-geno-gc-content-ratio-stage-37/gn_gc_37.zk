@@ -1,0 +1,6 @@
+// cl-geno-gc-content-ratio-stage-37: DNA Sequence GC Base Frequency Percentage Stage 37
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn gc_content_37(gc_count: float, total: float) -> float:
+    return (gc_count / total * 100.0) * 37.0

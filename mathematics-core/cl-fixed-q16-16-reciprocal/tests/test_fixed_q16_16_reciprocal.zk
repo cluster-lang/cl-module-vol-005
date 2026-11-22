@@ -1,0 +1,11 @@
+// cl-fixed-q16-16-reciprocal: Test Suite
+import "../q16_rcp.zk"
+
+fn test_run():
+    res := q16_reciprocal(65536 * 2)
+    if res != 32768: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q16-16-reciprocal!")

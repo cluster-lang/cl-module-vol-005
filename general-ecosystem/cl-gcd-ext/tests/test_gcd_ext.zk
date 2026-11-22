@@ -1,0 +1,13 @@
+// cl-gcd-ext: Test Suite
+import "../gcd_ext.zk"
+
+fn test_gcdext():
+    res := extended_gcd(240, 46)
+    // 240*(-9) + 46*(47) = -2160 + 2162 = 2
+    if res.gcd_val != 2: sys_exit(1)
+    if (240 * res.x) + (46 * res.y) != 2: sys_exit(1)
+    print("test_gcdext passed: Bézout identity ax + by = gcd(a,b) verified")
+
+fn main():
+    test_gcdext()
+    print("✓ All tests passed for cl-gcd-ext!")

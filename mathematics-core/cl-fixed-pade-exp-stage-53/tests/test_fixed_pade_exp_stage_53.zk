@@ -1,0 +1,13 @@
+// cl-fixed-pade-exp-stage-53: Test Suite
+import "../pade_e_53.zk"
+
+fn test_run():
+    res := pade_exp_53(0.2)
+    diff := res - 64.7778
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-pade-exp-stage-53!")

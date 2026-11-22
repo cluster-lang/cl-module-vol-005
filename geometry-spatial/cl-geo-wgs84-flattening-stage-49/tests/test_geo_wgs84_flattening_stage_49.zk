@@ -1,0 +1,13 @@
+// cl-geo-wgs84-flattening-stage-49: Test Suite
+import "../wgs_fl_49.zk"
+
+fn test_run():
+    res := wgs84_flattening_prod_49(6378.137, 6356.752)
+    diff := res - 1047.8650
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geo-wgs84-flattening-stage-49!")

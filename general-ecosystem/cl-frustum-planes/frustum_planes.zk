@@ -1,0 +1,23 @@
+// cl-frustum-planes: Normalize 3D Plane Coefficients
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn plane_normalize(plane: vector[float], idx: int):
+    nx := plane[idx * 4]
+    ny := plane[(idx * 4) + 1]
+    nz := plane[(idx * 4) + 2]
+    d := plane[(idx * 4) + 3]
+    len_sq := (nx * nx) + (ny * ny) + (nz * nz)
+    if len_sq > 0.000001:
+        // approx sqrt via 4-step Newton
+        s := len_sq * 0.5
+        if len_sq <= 1.0: s = 1.0
+        k := 0
+        while k < 4:
+            s = (s + (len_sq / s)) * 0.5
+            k = k + 1
+        inv_len := 1.0 / s
+        plane[idx * 4] = nx * inv_len
+        plane[(idx * 4) + 1] = ny * inv_len
+        plane[(idx * 4) + 2] = nz * inv_len
+        plane[(idx * 4) + 3] = d * inv_len

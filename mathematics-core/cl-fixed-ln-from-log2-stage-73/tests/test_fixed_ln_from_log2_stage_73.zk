@@ -1,0 +1,13 @@
+// cl-fixed-ln-from-log2-stage-73: Test Suite
+import "../ln_lg2_73.zk"
+
+fn test_run():
+    res := ln_from_log2_73(10.0)
+    diff := res - 505.9973
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-ln-from-log2-stage-73!")

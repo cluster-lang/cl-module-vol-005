@@ -1,0 +1,8 @@
+// cl-fixed-q8-8-clamp: Fixed-Point Range Clamping
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn fixed_q8_8_clamp(raw: int, min_raw: int, max_raw: int) -> int:
+    if raw < min_raw: return min_raw
+    if raw > max_raw: return max_raw
+    return raw

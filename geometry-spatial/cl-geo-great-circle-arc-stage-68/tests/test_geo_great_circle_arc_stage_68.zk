@@ -1,0 +1,13 @@
+// cl-geo-great-circle-arc-stage-68: Test Suite
+import "../geo_gc_68.zk"
+
+fn test_run():
+    res := great_circle_arc_68(0.04)
+    diff := res - 5.4400
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geo-great-circle-arc-stage-68!")

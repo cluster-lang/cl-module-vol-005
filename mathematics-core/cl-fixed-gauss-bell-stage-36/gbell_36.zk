@@ -1,0 +1,8 @@
+// cl-fixed-gauss-bell-stage-36: Gaussian Bell Curve Rational Approx Stage 36
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn gauss_bell_36(x: float) -> float:
+    x2 := x * x
+    den := 1.0 + x2 + 0.5 * x2 * x2
+    return (1.0 / den) * 36.0

@@ -1,0 +1,11 @@
+// cl-fixed-q8-24-abs: Test Suite
+import "../q8_24_abs.zk"
+
+fn test_run():
+    res := q8_24_abs(-16777216)
+    if res != 16777216: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q8-24-abs!")

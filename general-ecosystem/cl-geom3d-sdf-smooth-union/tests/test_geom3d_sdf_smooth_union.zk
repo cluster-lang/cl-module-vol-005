@@ -1,0 +1,13 @@
+// cl-geom3d-sdf-smooth-union: Test Suite
+import "../csg_sunion.zk"
+
+fn test_run():
+    res := sdf_smooth_union(1.0, 1.0, 0.5)
+    diff := res - 0.8750
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.001: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geom3d-sdf-smooth-union!")

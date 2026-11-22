@@ -1,0 +1,6 @@
+// cl-gfx-bilinear-interp-stage-97: 2D Texture Bilinear Interpolation Stage 97
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn bilinear_interp_97(c00: float, c10: float, tx: float) -> float:
+    return (c00 + tx * (c10 - c00)) * 97.0

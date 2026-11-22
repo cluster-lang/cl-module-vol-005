@@ -1,0 +1,11 @@
+// cl-fixed-q8-8-cos-approx: Test Suite
+import "../q8_cos.zk"
+
+fn test_run():
+    res := q8_cos(0)
+    if res != 256: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q8-8-cos-approx!")

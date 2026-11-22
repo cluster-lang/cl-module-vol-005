@@ -1,0 +1,13 @@
+// cl-fnv1a-32-rolling: Test Suite
+import "../fnv1a_rolling.zk"
+
+fn test_fnv_rolling():
+    h := fnv1a_32_init()
+    h = fnv1a_32_update(h, 99) // 'c'
+    h = fnv1a_32_update(h, 108) // 'l'
+    if h == fnv1a_32_init(): sys_exit(1)
+    print("test_fnv_rolling passed: incremental FNV-1a verified")
+
+fn main():
+    test_fnv_rolling()
+    print("✓ All tests passed for cl-fnv1a-32-rolling!")

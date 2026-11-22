@@ -1,0 +1,6 @@
+// cl-geo-haversine-delta-lon-stage-7: Haversine Longitudinal Metric Stage 7
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn haversine_lon_7(c1: float, c2: float, sin_h: float) -> float:
+    return c1 * c2 * sin_h * sin_h * 7.0

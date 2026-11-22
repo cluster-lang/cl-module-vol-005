@@ -1,0 +1,25 @@
+// cl-geom3d-box-sdf: Exact Signed Distance to Origin-Centered 3D Box
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn box_sdf(p: vector[float], half_b: vector[float]) -> float:
+    dx := p[0]
+    if dx < 0.0: dx = 0.0 - dx
+    dx = dx - half_b[0]
+    if dx < 0.0: dx = 0.0
+    dy := p[1]
+    if dy < 0.0: dy = 0.0 - dy
+    dy = dy - half_b[1]
+    if dy < 0.0: dy = 0.0
+    dz := p[2]
+    if dz < 0.0: dz = 0.0 - dz
+    dz = dz - half_b[2]
+    if dz < 0.0: dz = 0.0
+    dsq := dx*dx + dy*dy + dz*dz
+    guess := dsq * 0.5
+    iter := 0
+    while iter < 6:
+        if guess <= 0.0001: guess = 0.0001
+        guess = (guess + dsq / guess) * 0.5
+        iter = iter + 1
+    return guess

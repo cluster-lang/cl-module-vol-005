@@ -1,0 +1,12 @@
+// cl-geom3d-triangle-centroid: Test Suite
+import "../t3_cnt.zk"
+
+fn test_t3c():
+    c: vector[float] := [0.0, 0.0, 0.0]
+    triangle3d_centroid(c, [0.0, 0.0, 0.0], [3.0, 0.0, 0.0], [0.0, 6.0, 9.0])
+    if c[0] != 1.0 or c[1] != 2.0 or c[2] != 3.0: sys_exit(1)
+    print("test_t3c passed")
+
+fn main():
+    test_t3c()
+    print("✓ All tests passed for cl-geom3d-triangle-centroid!")

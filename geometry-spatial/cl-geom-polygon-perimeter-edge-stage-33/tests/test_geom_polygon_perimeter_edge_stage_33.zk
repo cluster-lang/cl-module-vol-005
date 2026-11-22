@@ -1,0 +1,13 @@
+// cl-geom-polygon-perimeter-edge-stage-33: Test Suite
+import "../gm_ed_33.zk"
+
+fn test_run():
+    res := edge_dist_sq_33(3.0, 4.0)
+    diff := res - 825.0000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geom-polygon-perimeter-edge-stage-33!")

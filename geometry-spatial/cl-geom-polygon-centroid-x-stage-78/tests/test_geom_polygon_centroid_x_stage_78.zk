@@ -1,0 +1,13 @@
+// cl-geom-polygon-centroid-x-stage-78: Test Suite
+import "../gm_cx_78.zk"
+
+fn test_run():
+    res := centroid_x_78(2.0, 5.0, 3.0)
+    diff := res - 1638.0000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geom-polygon-centroid-x-stage-78!")

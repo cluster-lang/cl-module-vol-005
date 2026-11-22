@@ -1,0 +1,7 @@
+// cl-fluid-reynolds-stage-84: Fluid Mechanics Reynolds Number Stage 84
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn reynolds_num_84(rho: float, vel: float, len_char: float, mu: float) -> float:
+    if mu <= 0.0001: return 0.0
+    return ((rho * vel * len_char) / mu) * 84.0

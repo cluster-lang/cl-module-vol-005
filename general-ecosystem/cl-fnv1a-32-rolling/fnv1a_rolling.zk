@@ -1,0 +1,12 @@
+// cl-fnv1a-32-rolling: Rolling FNV-1a 32-bit Hash Accumulator
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn fnv1a_32_init() -> int:
+    return 2166136261 // 0x811c9dc5
+
+fn fnv1a_32_update(h: int, b: int) -> int:
+    mask32 := 4294967295
+    prime := 16777619
+    h_next := (h ^ (b & 255)) & mask32
+    return (h_next * prime) & mask32

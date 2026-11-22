@@ -1,0 +1,6 @@
+// cl-fixed-q8-8-ceil-int: Q8.8 Fixed-Point Ceil to Integer
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q8_ceil(x: int) -> int:
+    return (x + 255) >> 8

@@ -1,0 +1,9 @@
+// cl-fixed-saturated-acc-stage-18: Saturated Integer Accumulator Stage 18
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sat_acc_18(a: int, b: int) -> int:
+    sum := a + b
+    if sum > 18000: return 18000
+    if sum < (0 - 18000): return (0 - 18000)
+    return sum

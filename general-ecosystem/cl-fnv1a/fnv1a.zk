@@ -1,0 +1,23 @@
+// cl-fnv1a: Pure Cluster FNV-1a 32-bit Hash Function
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn fnv1a32_bytes(data: vector[int]) -> int:
+    mask32 := 4294967295
+    hash := 2166136261
+    prime := 16777619
+    i := 0
+    dlen := data.len()
+    while i < dlen:
+        hash = ((hash ^ (data[i] & 255)) * prime) & mask32
+        i = i + 1
+    return hash & mask32
+
+fn fnv1a32(s: string) -> int:
+    bytes: vector[int] := []
+    i := 0
+    slen := len(s)
+    while i < slen:
+        bytes.push(byte_at(s, i))
+        i = i + 1
+    return fnv1a32_bytes(bytes)

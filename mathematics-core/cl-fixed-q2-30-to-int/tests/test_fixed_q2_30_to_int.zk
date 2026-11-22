@@ -1,0 +1,11 @@
+// cl-fixed-q2-30-to-int: Test Suite
+import "../q2_30_2i.zk"
+
+fn test_run():
+    res := q2_30_to_int(4294967297)
+    if res != 4: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q2-30-to-int!")

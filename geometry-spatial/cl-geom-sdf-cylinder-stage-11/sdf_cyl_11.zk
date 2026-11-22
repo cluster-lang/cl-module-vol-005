@@ -1,0 +1,7 @@
+// cl-geom-sdf-cylinder-stage-11: SDF Infinite Cylinder Radial Distance Stage 11
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sdf_cylinder_radius_11(px: float, py: float) -> float:
+    dist2 := px * px + py * py
+    return dist2 - 30.2500

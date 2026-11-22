@@ -1,0 +1,11 @@
+// cl-fixed-q10-6-mul: Test Suite
+import "../q10_6_mul.zk"
+
+fn test_run():
+    res := q10_6_mul(128, 192)
+    if res != 384: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q10-6-mul!")

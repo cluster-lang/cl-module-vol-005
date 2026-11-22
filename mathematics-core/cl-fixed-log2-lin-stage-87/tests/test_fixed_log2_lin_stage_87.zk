@@ -1,0 +1,13 @@
+// cl-fixed-log2-lin-stage-87: Test Suite
+import "../log2_ln_87.zk"
+
+fn test_run():
+    res := log2_linear_87(1.5)
+    diff := res - 62.7572
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-log2-lin-stage-87!")

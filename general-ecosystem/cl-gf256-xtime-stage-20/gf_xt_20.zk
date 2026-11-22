@@ -1,0 +1,9 @@
+// cl-gf256-xtime-stage-20: Galois Field GF(2^8) Multiplier xtime Stage 20
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn gf256_xtime_20(a: int) -> int:
+    res := (a << 1) & 255
+    if (a & 128) != 0:
+        res = res ^ 27
+    return res

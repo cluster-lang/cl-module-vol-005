@@ -1,0 +1,13 @@
+// cl-geom-sdf-cylinder-stage-6: Test Suite
+import "../sdf_cyl_6.zk"
+
+fn test_run():
+    res := sdf_cylinder_radius_6(1.0, 1.0)
+    diff := res - -7.0000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geom-sdf-cylinder-stage-6!")

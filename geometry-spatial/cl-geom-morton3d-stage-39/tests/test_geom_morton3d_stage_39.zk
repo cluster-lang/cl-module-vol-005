@@ -1,0 +1,11 @@
+// cl-geom-morton3d-stage-39: Test Suite
+import "../m3d_39.zk"
+
+fn test_run():
+    res := morton3d_interleave_39(1, 0, 1)
+    if res != 317: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geom-morton3d-stage-39!")

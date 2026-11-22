@@ -1,0 +1,18 @@
+// cl-geom2d-triangle-semiperimeter: 2D Triangle Semiperimeter Evaluator
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn float_sqrt_semi(x: float) -> float:
+    if x <= 0.0: return 0.0
+    g := x
+    i := 0
+    while i < 10:
+        g = (g + x / g) * 0.5
+        i = i + 1
+    return g
+
+fn triangle2d_semiperimeter(v0: vector[float], v1: vector[float], v2: vector[float]) -> float:
+    d01 := float_sqrt_semi((v1[0]-v0[0])*(v1[0]-v0[0]) + (v1[1]-v0[1])*(v1[1]-v0[1]))
+    d12 := float_sqrt_semi((v2[0]-v1[0])*(v2[0]-v1[0]) + (v2[1]-v1[1])*(v2[1]-v1[1]))
+    d20 := float_sqrt_semi((v0[0]-v2[0])*(v0[0]-v2[0]) + (v0[1]-v2[1])*(v0[1]-v2[1]))
+    return (d01 + d12 + d20) * 0.5

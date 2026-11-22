@@ -1,0 +1,6 @@
+// cl-geom-gjk-support-diff-stage-11: GJK Minkowski Support Difference Stage 11
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn gjk_support_diff_11(s1x: float, s2x: float) -> float:
+    return (s1x - s2x) * 11.0

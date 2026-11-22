@@ -1,0 +1,8 @@
+// cl-geom3d-triangle-centroid: 3D Triangle Centroid Evaluator
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn triangle3d_centroid(out_c: vector[float], v0: vector[float], v1: vector[float], v2: vector[float]):
+    out_c[0] = (v0[0] + v1[0] + v2[0]) / 3.0
+    out_c[1] = (v0[1] + v1[1] + v2[1]) / 3.0
+    out_c[2] = (v0[2] + v1[2] + v2[2]) / 3.0

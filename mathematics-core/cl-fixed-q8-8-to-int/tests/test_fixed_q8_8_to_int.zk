@@ -1,0 +1,11 @@
+// cl-fixed-q8-8-to-int: Test Suite
+import "../f_q8_8_ti.zk"
+
+fn test_f_ti():
+    raw := 7 << 8
+    if fixed_q8_8_to_int(raw) != 7: sys_exit(1)
+    print("test_f_ti passed")
+
+fn main():
+    test_f_ti()
+    print("✓ All tests passed for cl-fixed-q8-8-to-int!")

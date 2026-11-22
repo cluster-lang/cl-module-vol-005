@@ -1,0 +1,11 @@
+// cl-geno-needleman-score-gap-stage-9: Test Suite
+import "../gn_ng_9.zk"
+
+fn test_run():
+    res := nw_gap_9(20, 2)
+    if res != 27: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geno-needleman-score-gap-stage-9!")

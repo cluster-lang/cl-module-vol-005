@@ -1,0 +1,11 @@
+// cl-fixed-q28-4-mul: Test Suite
+import "../q28_4_mul.zk"
+
+fn test_run():
+    res := q28_4_mul(32, 48)
+    if res != 96: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q28-4-mul!")

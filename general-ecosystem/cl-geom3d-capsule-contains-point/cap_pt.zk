@@ -1,0 +1,18 @@
+// cl-geom3d-capsule-contains-point: 3D Capsule Point Containment
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn capsule3d_contains_point(p: vector[float], p0: vector[float], p1: vector[float], r: float) -> int:
+    dx := p1[0] - p0[0]; dy := p1[1] - p0[1]; dz := p1[2] - p0[2]
+    seg_len_sq := dx*dx + dy*dy + dz*dz
+    t := 0.0
+    if seg_len_sq > 0.000001:
+        t = ((p[0]-p0[0])*dx + (p[1]-p0[1])*dy + (p[2]-p0[2])*dz) / seg_len_sq
+        if t < 0.0: t = 0.0
+        if t > 1.0: t = 1.0
+    cx := p0[0] + t * dx
+    cy := p0[1] + t * dy
+    cz := p0[2] + t * dz
+    dist_sq := (p[0]-cx)*(p[0]-cx) + (p[1]-cy)*(p[1]-cy) + (p[2]-cz)*(p[2]-cz)
+    if dist_sq <= r * r: return 1
+    return 0

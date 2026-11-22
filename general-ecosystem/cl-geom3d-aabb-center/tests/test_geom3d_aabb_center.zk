@@ -1,0 +1,12 @@
+// cl-geom3d-aabb-center: Test Suite
+import "../aabb_cnt.zk"
+
+fn test_aabc():
+    c: vector[float] := [0.0, 0.0, 0.0]
+    aabb3d_center(c, [0.0, 0.0, 0.0], [4.0, 6.0, 8.0])
+    if c[0] != 2.0 or c[1] != 3.0 or c[2] != 4.0: sys_exit(1)
+    print("test_aabc passed")
+
+fn main():
+    test_aabc()
+    print("✓ All tests passed for cl-geom3d-aabb-center!")

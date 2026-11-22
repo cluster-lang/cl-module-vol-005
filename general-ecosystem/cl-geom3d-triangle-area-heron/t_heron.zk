@@ -1,0 +1,21 @@
+// cl-geom3d-triangle-area-heron: 3D Triangle Heron Area Evaluator
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn float_sqrt_heron(x: float) -> float:
+    if x <= 0.0: return 0.0
+    g := x
+    i := 0
+    while i < 10:
+        g = (g + x / g) * 0.5
+        i = i + 1
+    return g
+
+fn triangle3d_area_heron(v0: vector[float], v1: vector[float], v2: vector[float]) -> float:
+    a := float_sqrt_heron((v1[0]-v0[0])*(v1[0]-v0[0]) + (v1[1]-v0[1])*(v1[1]-v0[1]) + (v1[2]-v0[2])*(v1[2]-v0[2]))
+    b := float_sqrt_heron((v2[0]-v1[0])*(v2[0]-v1[0]) + (v2[1]-v1[1])*(v2[1]-v1[1]) + (v2[2]-v1[2])*(v2[2]-v1[2]))
+    c := float_sqrt_heron((v0[0]-v2[0])*(v0[0]-v2[0]) + (v0[1]-v2[1])*(v0[1]-v2[1]) + (v0[2]-v2[2])*(v0[2]-v2[2]))
+    s := (a + b + c) * 0.5
+    area_sq := s * (s - a) * (s - b) * (s - c)
+    if area_sq < 0.0: return 0.0
+    return float_sqrt_heron(area_sq)

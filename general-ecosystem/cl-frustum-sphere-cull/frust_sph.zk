@@ -1,0 +1,9 @@
+// cl-frustum-sphere-cull: Plane-Sphere Signed Distance Culling
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+// Returns 1 if sphere is inside plane half-space (dist >= -radius)
+fn sphere_inside_plane(nx: float, ny: float, nz: float, d: float, sx: float, sy: float, sz: float, r: float) -> int:
+    dist := (nx * sx) + (ny * sy) + (nz * sz) + d
+    if dist < -r: return 0
+    return 1

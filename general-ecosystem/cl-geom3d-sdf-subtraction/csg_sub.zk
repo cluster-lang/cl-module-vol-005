@@ -1,0 +1,8 @@
+// cl-geom3d-sdf-subtraction: Constructive Solid Geometry (CSG) SDF Subtraction (Max(d1, -d2))
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sdf_subtraction(d1: float, d2: float) -> float:
+    neg_d2 := 0.0 - d2
+    if d1 > neg_d2: return d1
+    return neg_d2

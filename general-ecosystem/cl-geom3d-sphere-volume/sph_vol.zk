@@ -1,0 +1,7 @@
+// cl-geom3d-sphere-volume: Sphere Volume Evaluator
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sphere_volume(r: float) -> float:
+    pi := 3.14159265
+    return (4.0 / 3.0) * pi * r * r * r

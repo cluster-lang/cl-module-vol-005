@@ -1,0 +1,10 @@
+// cl-geom-point-in-bbox-stage-30: Point-in-Bounding-Box Inclusion Stage 30
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn point_in_bbox_30(x: int, y: int, min_x: int, max_x: int, min_y: int, max_y: int) -> int:
+    if x < min_x: return 0
+    if x > max_x: return 0
+    if y < min_y: return 0
+    if y > max_y: return 0
+    return 30

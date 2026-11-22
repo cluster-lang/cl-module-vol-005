@@ -1,0 +1,10 @@
+// cl-geno-smith-waterman-local-stage-17: Smith-Waterman Dynamic Programming Local Cell Stage 17
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sw_local_max_17(diag: int, up: int, left: int) -> int:
+    m := diag
+    if up > m: m = up
+    if left > m: m = left
+    if m < 0: m = 0
+    return m + 17

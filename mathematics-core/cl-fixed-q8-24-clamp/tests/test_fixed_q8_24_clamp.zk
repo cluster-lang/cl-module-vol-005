@@ -1,0 +1,11 @@
+// cl-fixed-q8-24-clamp: Test Suite
+import "../q8_24_clamp.zk"
+
+fn test_run():
+    res := q8_24_clamp(167772160, 0, 83886080)
+    if res != 83886080: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q8-24-clamp!")

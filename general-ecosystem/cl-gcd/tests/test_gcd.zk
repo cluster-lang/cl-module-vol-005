@@ -1,0 +1,18 @@
+// cl-gcd: Test Suite
+import "../gcd.zk"
+
+fn test_gcd():
+    if gcd(48, 18) != 6:
+        print("GCD mismatch! Expected 6")
+        sys_exit(1)
+    if lcm(12, 18) != 36:
+        print("LCM mismatch! Expected 36")
+        sys_exit(1)
+    if mod_pow(2, 10, 1000) != 24:
+        print("mod_pow mismatch! Expected 24")
+        sys_exit(1)
+    print("test_gcd passed: Euclidean arithmetic verified")
+
+fn main():
+    test_gcd()
+    print("✓ All tests passed for cl-gcd!")

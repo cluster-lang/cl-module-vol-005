@@ -1,0 +1,11 @@
+// cl-fixed-q28-4-clamp: Test Suite
+import "../q28_4_clamp.zk"
+
+fn test_run():
+    res := q28_4_clamp(160, 0, 80)
+    if res != 80: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q28-4-clamp!")

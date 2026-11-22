@@ -1,0 +1,11 @@
+// cl-fixed-q4-12-sub: Test Suite
+import "../q4_sub.zk"
+
+fn test_run():
+    res := q4_sub(8192, 4096)
+    if res != 4096: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q4-12-sub!")

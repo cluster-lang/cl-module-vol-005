@@ -1,0 +1,13 @@
+// cl-geo-utm-convergence-stage-81: Test Suite
+import "../utm_cn_81.zk"
+
+fn test_run():
+    res := utm_convergence_81(0.05, 0.7071)
+    diff := res - 2.8638
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geo-utm-convergence-stage-81!")

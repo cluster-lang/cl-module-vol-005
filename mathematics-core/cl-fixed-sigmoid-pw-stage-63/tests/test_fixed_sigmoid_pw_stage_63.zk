@@ -1,0 +1,13 @@
+// cl-fixed-sigmoid-pw-stage-63: Test Suite
+import "../sigm_pw_63.zk"
+
+fn test_run():
+    res := sigmoid_pw_63(0.0)
+    diff := res - 31.5000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-sigmoid-pw-stage-63!")

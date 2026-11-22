@@ -1,0 +1,13 @@
+// cl-fixed-q8-8-clamp: Test Suite
+import "../f_q8_8_clamp.zk"
+
+fn test_f_clamp():
+    low := 1 << 8
+    high := 10 << 8
+    if fixed_q8_8_clamp(0, low, high) != low: sys_exit(1)
+    if fixed_q8_8_clamp(15 << 8, low, high) != high: sys_exit(1)
+    print("test_f_clamp passed")
+
+fn main():
+    test_f_clamp()
+    print("✓ All tests passed for cl-fixed-q8-8-clamp!")

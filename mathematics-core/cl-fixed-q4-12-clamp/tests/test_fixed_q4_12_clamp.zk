@@ -1,0 +1,11 @@
+// cl-fixed-q4-12-clamp: Test Suite
+import "../q4_clamp.zk"
+
+fn test_run():
+    res := q4_clamp(1000, 100, 500)
+    if res != 500: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q4-12-clamp!")

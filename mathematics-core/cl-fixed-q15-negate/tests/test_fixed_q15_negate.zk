@@ -1,0 +1,11 @@
+// cl-fixed-q15-negate: Test Suite
+import "../q15_negs.zk"
+
+fn test_run():
+    res := q15_negate(1000)
+    if res != -1000: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q15-negate!")

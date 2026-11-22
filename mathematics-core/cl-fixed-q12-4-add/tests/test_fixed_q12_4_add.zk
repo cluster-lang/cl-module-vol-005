@@ -1,0 +1,12 @@
+// cl-fixed-q12-4-add: Test Suite
+import "../f_q12_4_add.zk"
+
+fn test_f_add():
+    a := 3 << 4
+    b := 5 << 4
+    if fixed_q12_4_add(a, b) != (8 << 4): sys_exit(1)
+    print("test_f_add passed")
+
+fn main():
+    test_f_add()
+    print("✓ All tests passed for cl-fixed-q12-4-add!")

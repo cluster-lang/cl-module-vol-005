@@ -1,0 +1,11 @@
+// cl-fnv1: Test Suite
+import "../fnv1.zk"
+
+fn test_fnv1():
+    if fnv1_32("") != 2166136261: sys_exit(1)
+    if fnv1_32("hello") != 3069866343: sys_exit(1) // 0xB6FA7167
+    print("test_fnv1 passed: FNV-1 official basis and multiply-first verified")
+
+fn main():
+    test_fnv1()
+    print("✓ All tests passed for cl-fnv1!")

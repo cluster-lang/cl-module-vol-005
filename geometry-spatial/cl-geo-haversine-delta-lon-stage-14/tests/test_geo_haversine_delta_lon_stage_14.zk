@@ -1,0 +1,13 @@
+// cl-geo-haversine-delta-lon-stage-14: Test Suite
+import "../geo_hn_14.zk"
+
+fn test_run():
+    res := haversine_lon_14(0.8, 0.8, 0.05)
+    diff := res - 0.0224
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geo-haversine-delta-lon-stage-14!")

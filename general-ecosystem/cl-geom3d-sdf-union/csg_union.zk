@@ -1,0 +1,7 @@
+// cl-geom3d-sdf-union: Constructive Solid Geometry (CSG) SDF Union (Min)
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sdf_union(d1: float, d2: float) -> float:
+    if d1 < d2: return d1
+    return d2

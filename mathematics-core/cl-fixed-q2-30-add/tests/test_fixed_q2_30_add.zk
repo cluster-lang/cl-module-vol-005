@@ -1,0 +1,11 @@
+// cl-fixed-q2-30-add: Test Suite
+import "../q2_30_add.zk"
+
+fn test_run():
+    res := q2_30_add(1073741824, 1073741824)
+    if res != 2147483648: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q2-30-add!")

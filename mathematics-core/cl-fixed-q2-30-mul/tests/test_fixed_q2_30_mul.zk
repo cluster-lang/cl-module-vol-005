@@ -1,0 +1,11 @@
+// cl-fixed-q2-30-mul: Test Suite
+import "../q2_30_mul.zk"
+
+fn test_run():
+    res := q2_30_mul(2147483648, 3221225472)
+    if res != 6442450944: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q2-30-mul!")

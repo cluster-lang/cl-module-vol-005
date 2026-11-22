@@ -1,0 +1,13 @@
+// cl-fin-sharpe-num-stage-15: Test Suite
+import "../fin_sh_15.zk"
+
+fn test_run():
+    res := sharpe_excess_return_15(0.10)
+    diff := res - 0.0850
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fin-sharpe-num-stage-15!")

@@ -1,0 +1,10 @@
+// cl-fixed-q15-mac-saturate: Q15 Multiply-Accumulate Step with Saturation
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q15_mac_saturate(acc: int, a: int, b: int) -> int:
+    prod := (a * b) >> 15
+    s := acc + prod
+    if s > 32767: return 32767
+    if s < -32768: return -32768
+    return s

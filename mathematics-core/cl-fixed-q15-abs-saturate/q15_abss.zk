@@ -1,0 +1,8 @@
+// cl-fixed-q15-abs-saturate: Q15 Saturating Absolute Value
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q15_abs_saturate(x: int) -> int:
+    if x == -32768: return 32767
+    if x < 0: return 0 - x
+    return x

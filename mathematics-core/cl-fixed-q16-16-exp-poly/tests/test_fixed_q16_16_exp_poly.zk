@@ -1,0 +1,11 @@
+// cl-fixed-q16-16-exp-poly: Test Suite
+import "../q16_exp.zk"
+
+fn test_run():
+    res := q16_exp(0)
+    if res != 65536: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q16-16-exp-poly!")

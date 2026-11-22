@@ -1,0 +1,18 @@
+// cl-fnv1a: Test Suite
+import "../fnv1a.zk"
+
+fn test_fnv1a():
+    h_empty := fnv1a32("")
+    if h_empty != 2166136261:
+        print("FNV-1a empty mismatch! Expected 2166136261, Got: " + to_text(h_empty))
+        sys_exit(1)
+
+    h_test := fnv1a32("test")
+    if h_test != 2949673445:
+        print("FNV-1a 'test' mismatch! Expected 2949673445, Got: " + to_text(h_test))
+        sys_exit(1)
+    print("test_fnv1a passed: official FNV-1a vectors verified")
+
+fn main():
+    test_fnv1a()
+    print("✓ All tests passed for cl-fnv1a!")

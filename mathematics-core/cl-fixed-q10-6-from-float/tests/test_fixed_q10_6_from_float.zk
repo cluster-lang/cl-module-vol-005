@@ -1,0 +1,11 @@
+// cl-fixed-q10-6-from-float: Test Suite
+import "../q10_6_ff.zk"
+
+fn test_run():
+    res := q10_6_from_float(5.0)
+    if res != 320: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q10-6-from-float!")

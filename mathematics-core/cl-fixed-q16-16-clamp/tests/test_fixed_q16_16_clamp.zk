@@ -1,0 +1,13 @@
+// cl-fixed-q16-16-clamp: Test Suite
+import "../f_q16_16_clamp.zk"
+
+fn test_f_clamp():
+    low := 1 << 16
+    high := 10 << 16
+    if fixed_q16_16_clamp(0, low, high) != low: sys_exit(1)
+    if fixed_q16_16_clamp(15 << 16, low, high) != high: sys_exit(1)
+    print("test_f_clamp passed")
+
+fn main():
+    test_f_clamp()
+    print("✓ All tests passed for cl-fixed-q16-16-clamp!")

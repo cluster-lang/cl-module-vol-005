@@ -1,0 +1,13 @@
+// cl-fluid-reynolds-stage-20: Test Suite
+import "../reyn_20.zk"
+
+fn test_run():
+    res := reynolds_num_20(1.0, 10.0, 2.0, 1.0)
+    diff := res - 400.0000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fluid-reynolds-stage-20!")

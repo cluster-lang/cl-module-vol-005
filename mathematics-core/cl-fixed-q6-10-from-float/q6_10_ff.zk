@@ -1,0 +1,6 @@
+// cl-fixed-q6-10-from-float: Fixed-Point Q6-10 from Float Converter
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q6_10_from_float(f: float) -> int:
+    return int(f * 1024.0)

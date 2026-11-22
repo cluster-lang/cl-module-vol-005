@@ -1,0 +1,6 @@
+// cl-geom-primitive-test-17: Geometric Parameter Evaluation Primitive Step 17
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn geom_primitive_eval_17(v: float) -> float:
+    return v * 17.0

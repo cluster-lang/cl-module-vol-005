@@ -1,0 +1,11 @@
+// cl-fixed-q20-12-to-int: Test Suite
+import "../q20_12_2i.zk"
+
+fn test_run():
+    res := q20_12_to_int(16385)
+    if res != 4: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q20-12-to-int!")

@@ -1,0 +1,11 @@
+// cl-fixed-q6-10-sub: Test Suite
+import "../q6_10_sub.zk"
+
+fn test_run():
+    res := q6_10_sub(3072, 1024)
+    if res != 2048: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q6-10-sub!")

@@ -1,0 +1,11 @@
+// cl-fixed-q12-4-abs: Test Suite
+import "../f_q12_4_abs.zk"
+
+fn test_f_abs():
+    raw := 0 - (5 << 4)
+    if fixed_q12_4_abs(raw) != (5 << 4): sys_exit(1)
+    print("test_f_abs passed")
+
+fn main():
+    test_f_abs()
+    print("✓ All tests passed for cl-fixed-q12-4-abs!")

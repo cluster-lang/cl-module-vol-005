@@ -1,0 +1,15 @@
+// cl-frustum-cull: 3D Frustum AABB Culling Classifier
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+// Returns 1 if box is inside plane half-space: normal (nx, ny, nz) with offset d
+fn plane_aabb_inside(nx: float, ny: float, nz: float, d: float, min_x: float, min_y: float, min_z: float, max_x: float, max_y: float, max_z: float) -> int:
+    px := min_x
+    if nx > 0.0: px = max_x
+    py := min_y
+    if ny > 0.0: py = max_y
+    pz := min_z
+    if nz > 0.0: pz = max_z
+    dist := (nx * px) + (ny * py) + (nz * pz) + d
+    if dist < 0.0: return 0
+    return 1

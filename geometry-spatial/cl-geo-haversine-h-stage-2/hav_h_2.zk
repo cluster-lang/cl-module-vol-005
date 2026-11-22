@@ -1,0 +1,6 @@
+// cl-geo-haversine-h-stage-2: Haversine Delta Latitude Term Stage 2
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn haversine_h_2(sin_dlat2: float) -> float:
+    return sin_dlat2 * sin_dlat2 * 2.0

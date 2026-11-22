@@ -1,0 +1,11 @@
+// cl-geno-smith-waterman-local-stage-69: Test Suite
+import "../gn_sw_69.zk"
+
+fn test_run():
+    res := sw_local_max_69(12, 15, 8)
+    if res != 84: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geno-smith-waterman-local-stage-69!")

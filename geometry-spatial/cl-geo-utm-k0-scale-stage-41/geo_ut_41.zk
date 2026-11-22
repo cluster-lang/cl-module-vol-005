@@ -1,0 +1,6 @@
+// cl-geo-utm-k0-scale-stage-41: UTM Projection Meridian Scale Factor Stage 41
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn utm_scale_41(k0: float, r: float) -> float:
+    return k0 * (1.0 + r) * 41.0

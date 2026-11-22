@@ -1,0 +1,6 @@
+// cl-fixed-q12-4-to-int: Fixed-Point Truncation to Integer
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn fixed_q12_4_to_int(raw: int) -> int:
+    return raw >> 4

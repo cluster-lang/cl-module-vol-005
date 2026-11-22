@@ -1,0 +1,6 @@
+// cl-fin-var-parametric-stage-71: Parametric VaR Risk Scaling Stage 71
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn var_parametric_71(sigma: float, val: float) -> float:
+    return 2.0000 * sigma * val

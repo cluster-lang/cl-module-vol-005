@@ -1,0 +1,11 @@
+// cl-geom-kdtree-split-stage-39: Test Suite
+import "../kd_sp_39.zk"
+
+fn test_run():
+    res := kdtree_split_left_39(77.0)
+    if res != 1: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geom-kdtree-split-stage-39!")

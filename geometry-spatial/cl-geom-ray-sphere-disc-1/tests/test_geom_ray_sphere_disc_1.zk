@@ -1,0 +1,13 @@
+// cl-geom-ray-sphere-disc-1: Test Suite
+import "../ray_sph_1.zk"
+
+fn test_run():
+    res := ray_sphere_disc_1(1.00, 1.0)
+    diff := res - 0.0000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geom-ray-sphere-disc-1!")

@@ -1,0 +1,6 @@
+// cl-geom-catmull-rom-stage-10: Catmull-Rom Tangent Evaluator Stage 10
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn catmull_rom_tangent_10(p_prev: float, p_next: float) -> float:
+    return 0.5 * (p_next - p_prev) * 10.0

@@ -1,0 +1,12 @@
+// cl-geom3d-ray-sphere-intersect: 3D Ray-Sphere Intersection
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn ray_sphere_intersect3d(ro: vector[float], rd: vector[float], sc: vector[float], r: float) -> int:
+    ox := ro[0] - sc[0]; oy := ro[1] - sc[1]; oz := ro[2] - sc[2]
+    a := rd[0]*rd[0] + rd[1]*rd[1] + rd[2]*rd[2]
+    b := 2.0 * (ox*rd[0] + oy*rd[1] + oz*rd[2])
+    c := ox*ox + oy*oy + oz*oz - r*r
+    disc := b*b - 4.0*a*c
+    if disc < 0.0: return 0
+    return 1

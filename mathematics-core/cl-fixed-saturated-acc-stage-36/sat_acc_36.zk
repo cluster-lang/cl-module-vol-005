@@ -1,0 +1,9 @@
+// cl-fixed-saturated-acc-stage-36: Saturated Integer Accumulator Stage 36
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sat_acc_36(a: int, b: int) -> int:
+    sum := a + b
+    if sum > 36000: return 36000
+    if sum < (0 - 36000): return (0 - 36000)
+    return sum

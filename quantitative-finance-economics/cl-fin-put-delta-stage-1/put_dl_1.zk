@@ -1,0 +1,6 @@
+// cl-fin-put-delta-stage-1: Put Option Delta Stage 1
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn put_delta_1(call_delta: float) -> float:
+    return (call_delta - 1.0) * 1.0

@@ -1,0 +1,13 @@
+// cl-geo-meridian-radius-num-stage-64: Test Suite
+import "../mer_rn_64.zk"
+
+fn test_run():
+    res := meridian_radius_num_64(6378.0, 0.0067)
+    diff := res - 405457.1136
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geo-meridian-radius-num-stage-64!")

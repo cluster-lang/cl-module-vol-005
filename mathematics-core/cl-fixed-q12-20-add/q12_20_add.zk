@@ -1,0 +1,6 @@
+// cl-fixed-q12-20-add: Fixed-Point Q12-20 Addition
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q12_20_add(a: int, b: int) -> int:
+    return a + b

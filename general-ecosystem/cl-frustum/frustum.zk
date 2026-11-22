@@ -1,0 +1,21 @@
+// cl-frustum: 3D View Frustum Bounding Test
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn frustum_point_in_bounds(x: int, y: int, z: int, min_x: int, max_x: int, min_y: int, max_y: int, min_z: int, max_z: int) -> int:
+    if x < min_x: return 0
+    if x > max_x: return 0
+    if y < min_y: return 0
+    if y > max_y: return 0
+    if z < min_z: return 0
+    if z > max_z: return 0
+    return 1
+
+fn frustum_sphere_in_bounds(x: int, y: int, z: int, r: int, min_x: int, max_x: int, min_y: int, max_y: int, min_z: int, max_z: int) -> int:
+    if (x + r) < min_x: return 0
+    if (x - r) > max_x: return 0
+    if (y + r) < min_y: return 0
+    if (y - r) > max_y: return 0
+    if (z + r) < min_z: return 0
+    if (z - r) > max_z: return 0
+    return 1

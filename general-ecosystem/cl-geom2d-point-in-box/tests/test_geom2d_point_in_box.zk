@@ -1,0 +1,11 @@
+// cl-geom2d-point-in-box: Test Suite
+import "../pt_box.zk"
+
+fn test_pib():
+    if point_in_box2d([2.0, 3.0], [0.0, 0.0], [5.0, 5.0]) != 1: sys_exit(1)
+    if point_in_box2d([6.0, 3.0], [0.0, 0.0], [5.0, 5.0]) != 0: sys_exit(1)
+    print("test_pib passed")
+
+fn main():
+    test_pib()
+    print("✓ All tests passed for cl-geom2d-point-in-box!")

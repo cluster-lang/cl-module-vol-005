@@ -1,0 +1,14 @@
+// cl-geom2d-triangle-semiperimeter: Test Suite
+import "../tsemi.zk"
+
+fn test_tsemi():
+    // 3-4-5 right triangle: s = 6.0
+    res := triangle2d_semiperimeter([0.0, 0.0], [4.0, 0.0], [0.0, 3.0])
+    diff := res - 6.0
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.0001: sys_exit(1)
+    print("test_tsemi passed")
+
+fn main():
+    test_tsemi()
+    print("✓ All tests passed for cl-geom2d-triangle-semiperimeter!")

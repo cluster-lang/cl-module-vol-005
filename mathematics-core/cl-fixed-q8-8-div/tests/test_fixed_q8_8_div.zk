@@ -1,0 +1,12 @@
+// cl-fixed-q8-8-div: Test Suite
+import "../f_q8_8_div.zk"
+
+fn test_f_div():
+    a := 12 << 8
+    b := 3 << 8
+    if fixed_q8_8_div(a, b) != (4 << 8): sys_exit(1)
+    print("test_f_div passed")
+
+fn main():
+    test_f_div()
+    print("✓ All tests passed for cl-fixed-q8-8-div!")

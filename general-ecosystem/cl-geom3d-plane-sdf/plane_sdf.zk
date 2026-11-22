@@ -1,0 +1,6 @@
+// cl-geom3d-plane-sdf: Signed Distance to 3D Plane along Normal N
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn plane_sdf(p: vector[float], n: vector[float], h: float) -> float:
+    return p[0]*n[0] + p[1]*n[1] + p[2]*n[2] + h

@@ -1,0 +1,6 @@
+// cl-geom-polygon-perimeter-edge-stage-46: Polygon Edge Length Squared 2D Stage 46
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn edge_dist_sq_46(dx: float, dy: float) -> float:
+    return (dx * dx + dy * dy) * 46.0

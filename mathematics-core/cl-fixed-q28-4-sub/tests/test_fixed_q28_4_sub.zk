@@ -1,0 +1,11 @@
+// cl-fixed-q28-4-sub: Test Suite
+import "../q28_4_sub.zk"
+
+fn test_run():
+    res := q28_4_sub(48, 16)
+    if res != 32: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q28-4-sub!")

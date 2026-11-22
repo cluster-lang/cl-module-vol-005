@@ -1,0 +1,11 @@
+// cl-fixed-q15-from-float: Test Suite
+import "../q15_ff.zk"
+
+fn test_run():
+    res := q15_from_float(0.5)
+    if res != 16384: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q15-from-float!")

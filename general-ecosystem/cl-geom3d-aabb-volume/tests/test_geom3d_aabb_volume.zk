@@ -1,0 +1,13 @@
+// cl-geom3d-aabb-volume: Test Suite
+import "../aabb_vol.zk"
+
+fn test_aabv():
+    v := aabb3d_volume([0.0, 0.0, 0.0], [2.0, 3.0, 4.0])
+    diff := v - 24.0
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.0001: sys_exit(1)
+    print("test_aabv passed")
+
+fn main():
+    test_aabv()
+    print("✓ All tests passed for cl-geom3d-aabb-volume!")

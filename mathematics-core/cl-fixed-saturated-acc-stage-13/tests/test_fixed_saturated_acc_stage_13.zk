@@ -1,0 +1,11 @@
+// cl-fixed-saturated-acc-stage-13: Test Suite
+import "../sat_acc_13.zk"
+
+fn test_run():
+    res := sat_acc_13(12990, 20)
+    if res != 13000: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-saturated-acc-stage-13!")

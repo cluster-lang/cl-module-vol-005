@@ -1,0 +1,8 @@
+// cl-fixed-q2-30-clamp: Fixed-Point Q2-30 Clamping
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q2_30_clamp(x: int, min_v: int, max_v: int) -> int:
+    if x < min_v: return min_v
+    if x > max_v: return max_v
+    return x

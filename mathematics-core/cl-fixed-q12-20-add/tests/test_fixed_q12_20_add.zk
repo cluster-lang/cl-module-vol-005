@@ -1,0 +1,11 @@
+// cl-fixed-q12-20-add: Test Suite
+import "../q12_20_add.zk"
+
+fn test_run():
+    res := q12_20_add(1048576, 1048576)
+    if res != 2097152: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q12-20-add!")

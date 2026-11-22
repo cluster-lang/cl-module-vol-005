@@ -1,0 +1,12 @@
+// cl-fixed-q12-4-mul: Test Suite
+import "../f_q12_4_mul.zk"
+
+fn test_f_mul():
+    a := 3 << 4
+    b := 4 << 4
+    if fixed_q12_4_mul(a, b) != (12 << 4): sys_exit(1)
+    print("test_f_mul passed")
+
+fn main():
+    test_f_mul()
+    print("✓ All tests passed for cl-fixed-q12-4-mul!")

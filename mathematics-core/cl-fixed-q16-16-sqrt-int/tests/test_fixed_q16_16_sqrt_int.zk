@@ -1,0 +1,11 @@
+// cl-fixed-q16-16-sqrt-int: Test Suite
+import "../q16_sqrt.zk"
+
+fn test_run():
+    res := q16_sqrt(65536 * 4)
+    if res != 131072: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q16-16-sqrt-int!")

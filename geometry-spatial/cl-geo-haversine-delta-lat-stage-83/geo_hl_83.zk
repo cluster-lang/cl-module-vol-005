@@ -1,0 +1,6 @@
+// cl-geo-haversine-delta-lat-stage-83: Haversine Latitudinal Metric Stage 83
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn haversine_lat_83(sin_h: float) -> float:
+    return sin_h * sin_h * 83.0

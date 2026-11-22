@@ -1,0 +1,13 @@
+// cl-fixed-cordic-atan-stage-34: Test Suite
+import "../c_atan_34.zk"
+
+fn test_run():
+    res := cordic_atan_table_34()
+    diff := res - 0.0000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-cordic-atan-stage-34!")

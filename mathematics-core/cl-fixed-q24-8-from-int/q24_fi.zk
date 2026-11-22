@@ -1,0 +1,6 @@
+// cl-fixed-q24-8-from-int: Q24.8 Fixed-Point from Integer
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q24_from_int(n: int) -> int:
+    return n << 8

@@ -1,0 +1,11 @@
+// cl-geno-kmer-hash-step-stage-27: Test Suite
+import "../gn_km_27.zk"
+
+fn test_run():
+    res := kmer_hash_step_27(10, 3, 255)
+    if res != 70: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geno-kmer-hash-step-stage-27!")

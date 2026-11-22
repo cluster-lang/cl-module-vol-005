@@ -1,0 +1,6 @@
+// cl-fin-put-delta-stage-51: Put Option Delta Stage 51
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn put_delta_51(call_delta: float) -> float:
+    return (call_delta - 1.0) * 51.0

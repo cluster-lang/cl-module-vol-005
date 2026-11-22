@@ -1,0 +1,13 @@
+// cl-fixed-pow2-poly-stage-66: Test Suite
+import "../pw2_pl_66.zk"
+
+fn test_run():
+    res := pow2_frac_poly_66(0.5)
+    diff := res - 92.8376
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-pow2-poly-stage-66!")

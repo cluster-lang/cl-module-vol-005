@@ -1,0 +1,12 @@
+// cl-geom2d-point-in-triangle: 2D Point in Triangle Barycentric Test
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn point_in_triangle2d(p: vector[float], a: vector[float], b: vector[float], c: vector[float]) -> int:
+    d1 := (p[0] - b[0]) * (a[1] - b[1]) - (a[0] - b[0]) * (p[1] - b[1])
+    d2 := (p[0] - c[0]) * (b[1] - c[1]) - (b[0] - c[0]) * (p[1] - c[1])
+    d3 := (p[0] - a[0]) * (c[1] - a[1]) - (c[0] - a[0]) * (p[1] - a[1])
+    has_neg := (d1 < 0.0) or (d2 < 0.0) or (d3 < 0.0)
+    has_pos := (d1 > 0.0) or (d2 > 0.0) or (d3 > 0.0)
+    if has_neg and has_pos: return 0
+    return 1

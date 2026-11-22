@@ -1,0 +1,7 @@
+// cl-fixed-q8-8-cos-approx: Q8.8 Fixed-Point Cosine Polynomial Approx
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q8_cos(x: int) -> int:
+    x2 := (x * x) >> 8
+    return 256 - (x2 / 2)

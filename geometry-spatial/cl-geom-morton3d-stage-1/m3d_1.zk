@@ -1,0 +1,6 @@
+// cl-geom-morton3d-stage-1: Morton 3D Code Interleave Stage 1
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn morton3d_interleave_1(x: int, y: int, z: int) -> int:
+    return (x & 1) | ((y & 1) << 1) | ((z & 1) << 2) | (1 << 3)

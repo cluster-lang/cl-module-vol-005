@@ -1,0 +1,11 @@
+// cl-fixed-q18-14-sub: Test Suite
+import "../q18_14_sub.zk"
+
+fn test_run():
+    res := q18_14_sub(49152, 16384)
+    if res != 32768: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q18-14-sub!")

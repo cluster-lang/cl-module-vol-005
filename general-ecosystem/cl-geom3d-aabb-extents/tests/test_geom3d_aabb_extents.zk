@@ -1,0 +1,12 @@
+// cl-geom3d-aabb-extents: Test Suite
+import "../aabb_ext.zk"
+
+fn test_aabe():
+    e: vector[float] := [0.0, 0.0, 0.0]
+    aabb3d_half_extents(e, [0.0, 0.0, 0.0], [4.0, 6.0, 8.0])
+    if e[0] != 2.0 or e[1] != 3.0 or e[2] != 4.0: sys_exit(1)
+    print("test_aabe passed")
+
+fn main():
+    test_aabe()
+    print("✓ All tests passed for cl-geom3d-aabb-extents!")

@@ -1,0 +1,11 @@
+// cl-geno-needleman-score-gap-stage-47: Test Suite
+import "../gn_ng_47.zk"
+
+fn test_run():
+    res := nw_gap_47(20, 2)
+    if res != 65: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geno-needleman-score-gap-stage-47!")

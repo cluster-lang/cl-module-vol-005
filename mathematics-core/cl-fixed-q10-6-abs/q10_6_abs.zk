@@ -1,0 +1,7 @@
+// cl-fixed-q10-6-abs: Fixed-Point Q10-6 Absolute Value
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q10_6_abs(x: int) -> int:
+    if x < 0: return 0 - x
+    return x

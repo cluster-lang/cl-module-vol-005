@@ -1,0 +1,6 @@
+// cl-geo-wgs84-flattening-stage-20: WGS84 Ellipsoid Flattening Product Stage 20
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn wgs84_flattening_prod_20(a_axis: float, b_axis: float) -> float:
+    return (a_axis - b_axis) * 20.0

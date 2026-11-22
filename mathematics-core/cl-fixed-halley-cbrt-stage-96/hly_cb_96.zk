@@ -1,0 +1,9 @@
+// cl-fixed-halley-cbrt-stage-96: Halley Method Cube Root Correction Stage 96
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn halley_cbrt_step_96(y: float, a: float) -> float:
+    y3 := y * y * y
+    num := y3 + 2.0 * a
+    den := 2.0 * y3 + a
+    return (y * (num / den)) * 96.0

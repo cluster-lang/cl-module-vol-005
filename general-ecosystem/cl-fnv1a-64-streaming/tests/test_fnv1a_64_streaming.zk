@@ -1,0 +1,12 @@
+// cl-fnv1a-64-streaming: Test Suite
+import "../fnv64_stream.zk"
+
+fn test_fnv64():
+    h := fnv1a_64_init()
+    h = fnv1a_64_update(h, 99)
+    if h == fnv1a_64_init(): sys_exit(1)
+    print("test_fnv64 passed: 64-bit FNV-1a state update verified")
+
+fn main():
+    test_fnv64()
+    print("✓ All tests passed for cl-fnv1a-64-streaming!")

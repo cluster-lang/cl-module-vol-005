@@ -1,0 +1,11 @@
+// cl-fixed-q6-10-clamp: Test Suite
+import "../q6_10_clamp.zk"
+
+fn test_run():
+    res := q6_10_clamp(10240, 0, 5120)
+    if res != 5120: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q6-10-clamp!")

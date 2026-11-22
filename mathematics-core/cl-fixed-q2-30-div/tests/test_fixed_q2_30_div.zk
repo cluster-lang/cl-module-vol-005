@@ -1,0 +1,11 @@
+// cl-fixed-q2-30-div: Test Suite
+import "../q2_30_div.zk"
+
+fn test_run():
+    res := q2_30_div(6442450944, 2147483648)
+    if res != 3221225472: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q2-30-div!")

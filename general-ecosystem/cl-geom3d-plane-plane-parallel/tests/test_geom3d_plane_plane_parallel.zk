@@ -1,0 +1,14 @@
+// cl-geom3d-plane-plane-parallel: Test Suite
+import "../pln_par.zk"
+
+fn test_ppp():
+    p1: vector[float] := [0.0, 0.0, 1.0, 5.0]
+    p2: vector[float] := [0.0, 0.0, 2.0, -10.0]
+    p3: vector[float] := [1.0, 0.0, 0.0, 0.0]
+    if planes_are_parallel(p1, p2) != 1: sys_exit(1)
+    if planes_are_parallel(p1, p3) != 0: sys_exit(1)
+    print("test_ppp passed")
+
+fn main():
+    test_ppp()
+    print("✓ All tests passed for cl-geom3d-plane-plane-parallel!")

@@ -1,0 +1,13 @@
+// cl-fnv1a-64-streaming: Streaming 64-bit FNV-1a Hash State Machine
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn fnv1a_64_init() -> int:
+    // Offset basis: 0xcbf29ce484222325 -> signed: -3750763034362895579
+    return -3750763034362895579
+
+fn fnv1a_64_update(h: int, b: int) -> int:
+    // Prime: 0x100000001b3 -> 1099511628211
+    prime := 1099511628211
+    h_next := h ^ (b & 255)
+    return h_next * prime

@@ -1,0 +1,9 @@
+// cl-fixed-saturated-acc-stage-14: Saturated Integer Accumulator Stage 14
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sat_acc_14(a: int, b: int) -> int:
+    sum := a + b
+    if sum > 14000: return 14000
+    if sum < (0 - 14000): return (0 - 14000)
+    return sum

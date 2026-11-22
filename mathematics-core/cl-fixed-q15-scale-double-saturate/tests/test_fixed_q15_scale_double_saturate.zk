@@ -1,0 +1,11 @@
+// cl-fixed-q15-scale-double-saturate: Test Suite
+import "../q15_dbl.zk"
+
+fn test_run():
+    res := q15_double_saturate(20000)
+    if res != 32767: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q15-scale-double-saturate!")

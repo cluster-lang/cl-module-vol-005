@@ -1,0 +1,14 @@
+// cl-geom3d-ray-plane-intersect: Test Suite
+import "../ray_pln.zk"
+
+fn test_rp3():
+    // Plane z = 0
+    pln: vector[float] := [0.0, 0.0, 1.0, 0.0]
+    hit := ray_plane_intersect3d([0.0, 0.0, 5.0], [0.0, 0.0, -1.0], pln)
+    miss := ray_plane_intersect3d([0.0, 0.0, 5.0], [0.0, 0.0, 1.0], pln)
+    if hit != 1 or miss != 0: sys_exit(1)
+    print("test_rp3 passed")
+
+fn main():
+    test_rp3()
+    print("✓ All tests passed for cl-geom3d-ray-plane-intersect!")

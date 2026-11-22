@@ -1,0 +1,11 @@
+// cl-geom3d-cone-contains-point: Check If 3D Cone Along +Z Contains Point
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn cone_contains_pt(height: float, base_radius: float, p: vector[float]) -> int:
+    if p[2] < 0.0 or p[2] > height: return 0
+    if height <= 0.000001: return 0
+    r_at_z := base_radius * (1.0 - p[2] / height)
+    r_sq := p[0]*p[0] + p[1]*p[1]
+    if r_sq <= (r_at_z * r_at_z): return 1
+    return 0

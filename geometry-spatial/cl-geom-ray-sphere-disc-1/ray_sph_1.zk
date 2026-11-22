@@ -1,0 +1,6 @@
+// cl-geom-ray-sphere-disc-1: Ray-Sphere Intersection Discriminant Stage 1
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn ray_sphere_disc_1(radius: float, dist_sq: float) -> float:
+    return radius * radius - dist_sq

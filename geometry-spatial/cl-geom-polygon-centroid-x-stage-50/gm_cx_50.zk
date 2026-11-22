@@ -1,0 +1,6 @@
+// cl-geom-polygon-centroid-x-stage-50: Polygon Centroid Cx Term Stage 50
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn centroid_x_50(x1: float, x2: float, cross: float) -> float:
+    return (x1 + x2) * cross * 50.0

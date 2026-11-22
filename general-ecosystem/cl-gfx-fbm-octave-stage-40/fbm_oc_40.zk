@@ -1,0 +1,6 @@
+// cl-gfx-fbm-octave-stage-40: Fractional Brownian Motion Persistence Stage 40
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn fbm_octave_scale_40(noise_val: float, amplitude: float) -> float:
+    return noise_val * amplitude * 40.0

@@ -1,0 +1,23 @@
+// cl-fletcher: Pure Cluster Fletcher-16 & Fletcher-32 Checksum Engine
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn fletcher16_bytes(data: vector[int]) -> int:
+    s1 := 0
+    s2 := 0
+    i := 0
+    dlen := data.len()
+    while i < dlen:
+        s1 = (s1 + (data[i] & 255)) % 255
+        s2 = (s2 + s1) % 255
+        i = i + 1
+    return ((s2 << 8) | s1) & 65535
+
+fn fletcher16(s: string) -> int:
+    bytes: vector[int] := []
+    i := 0
+    slen := len(s)
+    while i < slen:
+        bytes.push(byte_at(s, i))
+        i = i + 1
+    return fletcher16_bytes(bytes)

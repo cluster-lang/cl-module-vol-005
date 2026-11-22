@@ -1,0 +1,11 @@
+// cl-fowler-noll-vo-64: Test Suite
+import "../fnv64.zk"
+
+fn test_fnv64():
+    h := fnv1a_64("cluster")
+    if h != 8267913832082780237: sys_exit(1) // 0x72BD87D332D5304D
+    print("test_fnv64 passed: 64-bit FNV-1a hash verified")
+
+fn main():
+    test_fnv64()
+    print("✓ All tests passed for cl-fowler-noll-vo-64!")

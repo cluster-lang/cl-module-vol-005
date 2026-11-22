@@ -1,0 +1,9 @@
+// cl-geom3d-cylinder-contains-point: Check If 3D Cylinder Along Z Contains Point
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn cylinder_contains_pt(radius: float, half_height: float, p: vector[float]) -> int:
+    if p[2] < (0.0 - half_height) or p[2] > half_height: return 0
+    r_sq := p[0]*p[0] + p[1]*p[1]
+    if r_sq <= (radius * radius): return 1
+    return 0

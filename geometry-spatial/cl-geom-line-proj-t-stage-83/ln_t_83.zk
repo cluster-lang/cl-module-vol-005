@@ -1,0 +1,7 @@
+// cl-geom-line-proj-t-stage-83: Line Projection Parameter t Stage 83
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn line_proj_param_83(dot_ap_ab: float, dot_ab_ab: float) -> float:
+    if dot_ab_ab <= 0.0001: return 0.0
+    return (dot_ap_ab / dot_ab_ab) * 83.0

@@ -1,0 +1,8 @@
+// cl-geom3d-point-plane-unsigned-dist: Unsigned Absolute Distance from Point to 3D Plane
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn point_plane_unsigned_dist(p: vector[float], plane_n: vector[float], plane_d: float) -> float:
+    d := p[0]*plane_n[0] + p[1]*plane_n[1] + p[2]*plane_n[2] - plane_d
+    if d < 0.0: return 0.0 - d
+    return d

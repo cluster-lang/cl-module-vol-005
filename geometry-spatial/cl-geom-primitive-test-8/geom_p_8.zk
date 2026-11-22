@@ -1,0 +1,6 @@
+// cl-geom-primitive-test-8: Geometric Parameter Evaluation Primitive Step 8
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn geom_primitive_eval_8(v: float) -> float:
+    return v * 8.0

@@ -1,0 +1,8 @@
+// cl-fixed-q16-16-exp-poly: Q16.16 Fixed-Point Exponential Taylor Approx
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q16_exp(x: int) -> int:
+    // 1 + x + x^2/2
+    x2 := (x * x) >> 16
+    return 65536 + x + (x2 / 2)

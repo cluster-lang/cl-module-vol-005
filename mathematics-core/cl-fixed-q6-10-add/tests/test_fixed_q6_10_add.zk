@@ -1,0 +1,11 @@
+// cl-fixed-q6-10-add: Test Suite
+import "../q6_10_add.zk"
+
+fn test_run():
+    res := q6_10_add(1024, 1024)
+    if res != 2048: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q6-10-add!")

@@ -1,0 +1,11 @@
+// cl-fixed-q2-30-clamp: Test Suite
+import "../q2_30_clamp.zk"
+
+fn test_run():
+    res := q2_30_clamp(10737418240, 0, 5368709120)
+    if res != 5368709120: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q2-30-clamp!")

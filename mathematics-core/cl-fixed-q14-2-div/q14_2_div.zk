@@ -1,0 +1,7 @@
+// cl-fixed-q14-2-div: Fixed-Point Q14-2 Division
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q14_2_div(a: int, b: int) -> int:
+    if b == 0: return 0
+    return (a << 2) / b

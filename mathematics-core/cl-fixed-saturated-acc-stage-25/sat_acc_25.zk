@@ -1,0 +1,9 @@
+// cl-fixed-saturated-acc-stage-25: Saturated Integer Accumulator Stage 25
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sat_acc_25(a: int, b: int) -> int:
+    sum := a + b
+    if sum > 25000: return 25000
+    if sum < (0 - 25000): return (0 - 25000)
+    return sum

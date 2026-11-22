@@ -1,0 +1,13 @@
+// cl-fletcher: Test Suite
+import "../fletcher.zk"
+
+fn test_fletcher():
+    chk := fletcher16("abcde")
+    if chk != 51440: // 0xC8F0
+        print("Fletcher16 mismatch! Expected 51440, Got: " + to_text(chk))
+        sys_exit(1)
+    print("test_fletcher passed: 0xC8F0 verified")
+
+fn main():
+    test_fletcher()
+    print("✓ All tests passed for cl-fletcher!")

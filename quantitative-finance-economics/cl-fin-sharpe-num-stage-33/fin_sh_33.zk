@@ -1,0 +1,6 @@
+// cl-fin-sharpe-num-stage-33: Sharpe Ratio Excess Return Stage 33
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sharpe_excess_return_33(ret: float) -> float:
+    return ret - 0.0330

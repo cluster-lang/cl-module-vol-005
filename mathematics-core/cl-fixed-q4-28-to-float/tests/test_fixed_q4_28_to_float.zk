@@ -1,0 +1,13 @@
+// cl-fixed-q4-28-to-float: Test Suite
+import "../q4_28_2f.zk"
+
+fn test_run():
+    res := q4_28_to_float(1342177280)
+    diff := res - 5.0000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.001: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q4-28-to-float!")

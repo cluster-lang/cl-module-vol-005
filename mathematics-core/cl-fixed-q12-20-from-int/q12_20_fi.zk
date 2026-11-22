@@ -1,0 +1,6 @@
+// cl-fixed-q12-20-from-int: Fixed-Point Q12-20 from Integer
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q12_20_from_int(n: int) -> int:
+    return n << 20

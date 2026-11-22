@@ -1,0 +1,11 @@
+// cl-geno-kmer-hash-step-stage-12: Test Suite
+import "../gn_km_12.zk"
+
+fn test_run():
+    res := kmer_hash_step_12(10, 3, 255)
+    if res != 55: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geno-kmer-hash-step-stage-12!")

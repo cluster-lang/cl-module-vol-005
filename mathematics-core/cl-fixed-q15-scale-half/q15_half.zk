@@ -1,0 +1,6 @@
+// cl-fixed-q15-scale-half: Q15 Fast Divide by 2 via Right Shift
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q15_half(x: int) -> int:
+    return x >> 1

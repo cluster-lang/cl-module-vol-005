@@ -1,0 +1,8 @@
+// cl-geom-sat-overlap-stage-22: SAT 1D Interval Overlap Check Stage 22
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sat_interval_overlap_22(min_a: float, max_a: float, min_b: float, max_b: float) -> int:
+    if max_a < min_b: return 0
+    if max_b < min_a: return 0
+    return 1

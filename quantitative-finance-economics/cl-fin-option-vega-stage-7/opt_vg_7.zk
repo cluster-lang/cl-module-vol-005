@@ -1,0 +1,6 @@
+// cl-fin-option-vega-stage-7: Option Vega Sensitivity Stage 7
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn option_vega_7(spot: float, sqrt_t: float) -> float:
+    return 0.4 * spot * sqrt_t * 7.0

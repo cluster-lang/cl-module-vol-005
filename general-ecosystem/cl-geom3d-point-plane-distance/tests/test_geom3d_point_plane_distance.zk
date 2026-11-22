@@ -1,0 +1,15 @@
+// cl-geom3d-point-plane-distance: Test Suite
+import "../pt_pln_dist.zk"
+
+fn test_ppd():
+    // Plane z - 2 = 0
+    pln: vector[float] := [0.0, 0.0, 1.0, -2.0]
+    d := point_plane_distance([0.0, 0.0, 5.0], pln)
+    diff := d - 3.0
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.0001: sys_exit(1)
+    print("test_ppd passed")
+
+fn main():
+    test_ppd()
+    print("✓ All tests passed for cl-geom3d-point-plane-distance!")

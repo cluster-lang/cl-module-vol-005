@@ -1,0 +1,6 @@
+// cl-fixed-q8-8-round-int: Q8.8 Fixed-Point Round to Nearest Integer
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q8_round(x: int) -> int:
+    return (x + 128) >> 8

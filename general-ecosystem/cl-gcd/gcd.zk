@@ -1,0 +1,31 @@
+// cl-gcd: Pure Cluster Euclidean GCD, LCM & Modular Arithmetic
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn gcd(a: int, b: int) -> int:
+    x := a
+    if x < 0: x = 0 - x
+    y := b
+    if y < 0: y = 0 - y
+    while y != 0:
+        t := y
+        y = x % y
+        x = t
+    return x
+
+fn lcm(a: int, b: int) -> int:
+    if a == 0 or b == 0:
+        return 0
+    g := gcd(a, b)
+    return (a / g) * b
+
+fn mod_pow(base_val: int, exp_val: int, mod_val: int) -> int:
+    res := 1
+    b := base_val % mod_val
+    e := exp_val
+    while e > 0:
+        if (e & 1) == 1:
+            res = (res * b) % mod_val
+        e = e >> 1
+        b = (b * b) % mod_val
+    return res

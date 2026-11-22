@@ -1,0 +1,6 @@
+// cl-fin-put-delta-stage-27: Put Option Delta Stage 27
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn put_delta_27(call_delta: float) -> float:
+    return (call_delta - 1.0) * 27.0

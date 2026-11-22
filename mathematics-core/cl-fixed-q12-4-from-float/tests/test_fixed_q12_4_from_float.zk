@@ -1,0 +1,12 @@
+// cl-fixed-q12-4-from-float: Test Suite
+import "../f_q12_4_ff.zk"
+
+fn test_f_ff():
+    res := fixed_q12_4_from_float(2.5)
+    exp := int(2.5 * 16.0)
+    if res != exp: sys_exit(1)
+    print("test_f_ff passed")
+
+fn main():
+    test_f_ff()
+    print("✓ All tests passed for cl-fixed-q12-4-from-float!")

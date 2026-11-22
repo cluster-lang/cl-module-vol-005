@@ -1,0 +1,11 @@
+// cl-fixed-q16-16-from-int: Test Suite
+import "../f_q16_16_fi.zk"
+
+fn test_f_fi():
+    res := fixed_q16_16_from_int(7)
+    if res != (7 << 16): sys_exit(1)
+    print("test_f_fi passed")
+
+fn main():
+    test_f_fi()
+    print("✓ All tests passed for cl-fixed-q16-16-from-int!")

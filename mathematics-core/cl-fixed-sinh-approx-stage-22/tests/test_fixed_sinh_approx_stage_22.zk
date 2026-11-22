@@ -1,0 +1,13 @@
+// cl-fixed-sinh-approx-stage-22: Test Suite
+import "../f_sinh_22.zk"
+
+fn test_run():
+    res := q16_sinh_approx_22(0.5)
+    diff := res - 0.5208
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-sinh-approx-stage-22!")

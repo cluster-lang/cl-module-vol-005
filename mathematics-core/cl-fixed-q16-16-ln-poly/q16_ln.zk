@@ -1,0 +1,9 @@
+// cl-fixed-q16-16-ln-poly: Q16.16 Fixed-Point Natural Log Taylor Approx around 1.0
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q16_ln(x: int) -> int:
+    // for x near 65536: (x - 1) - (x - 1)^2 / 2
+    u := x - 65536
+    u2 := (u * u) >> 16
+    return u - (u2 / 2)

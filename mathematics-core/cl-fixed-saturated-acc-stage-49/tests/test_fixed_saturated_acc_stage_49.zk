@@ -1,0 +1,11 @@
+// cl-fixed-saturated-acc-stage-49: Test Suite
+import "../sat_acc_49.zk"
+
+fn test_run():
+    res := sat_acc_49(48990, 20)
+    if res != 49000: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-saturated-acc-stage-49!")

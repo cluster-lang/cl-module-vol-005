@@ -1,0 +1,11 @@
+// cl-fixed-q16-16-lerp-exact: Test Suite
+import "../q16_lerp.zk"
+
+fn test_run():
+    res := q16_lerp(0, 65536 * 10, 32768)
+    if res != 327680: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q16-16-lerp-exact!")

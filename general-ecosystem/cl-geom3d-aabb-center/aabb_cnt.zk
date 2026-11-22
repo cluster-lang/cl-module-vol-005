@@ -1,0 +1,8 @@
+// cl-geom3d-aabb-center: 3D AABB Center Point Evaluator
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn aabb3d_center(out_c: vector[float], min_pt: vector[float], max_pt: vector[float]):
+    out_c[0] = (min_pt[0] + max_pt[0]) * 0.5
+    out_c[1] = (min_pt[1] + max_pt[1]) * 0.5
+    out_c[2] = (min_pt[2] + max_pt[2]) * 0.5

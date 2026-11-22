@@ -1,0 +1,11 @@
+// cl-geno-needleman-score-match-stage-55: Test Suite
+import "../gn_nm_55.zk"
+
+fn test_run():
+    res := nw_diag_55(20, 5)
+    if res != 80: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geno-needleman-score-match-stage-55!")

@@ -1,0 +1,11 @@
+// cl-fixed-q15-mul: Test Suite
+import "../q15_mul.zk"
+
+fn test_run():
+    res := q15_mul(32768, 16384)
+    if res != 16384: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q15-mul!")

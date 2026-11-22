@@ -1,0 +1,6 @@
+// cl-fixed-q12-4-add: Fixed-Point Addition
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn fixed_q12_4_add(a: int, b: int) -> int:
+    return a + b

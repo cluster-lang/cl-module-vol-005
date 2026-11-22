@@ -1,0 +1,9 @@
+// cl-fixed-q15-add-saturate: Q15 Saturating Addition [-32768, 32767]
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q15_add_saturate(a: int, b: int) -> int:
+    s := a + b
+    if s > 32767: return 32767
+    if s < -32768: return -32768
+    return s

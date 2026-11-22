@@ -1,0 +1,6 @@
+// cl-fixed-q28-4-to-float: Fixed-Point Q28-4 to Float Converter
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q28_4_to_float(x: int) -> float:
+    return float(x) / 16.0

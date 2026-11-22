@@ -1,0 +1,6 @@
+// cl-fixed-q2-30-from-int: Fixed-Point Q2-30 from Integer
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q2_30_from_int(n: int) -> int:
+    return n << 30

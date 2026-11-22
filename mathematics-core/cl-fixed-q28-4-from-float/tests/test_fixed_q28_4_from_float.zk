@@ -1,0 +1,11 @@
+// cl-fixed-q28-4-from-float: Test Suite
+import "../q28_4_ff.zk"
+
+fn test_run():
+    res := q28_4_from_float(5.0)
+    if res != 80: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q28-4-from-float!")

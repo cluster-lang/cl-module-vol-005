@@ -1,0 +1,10 @@
+// cl-geom2d-point-line-signed-dist Package Manifest
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+name := "cl-geom2d-point-line-signed-dist"
+version := "0.1.0"
+description := "Signed Distance from Point to 2D Line (ax + by + c = 0)"
+main := "pt_l2_sdist.zk"
+license := "CCFL-2.0"
+author := "zk-mohammad <ZaidKhan-alamgir@proton.me>"

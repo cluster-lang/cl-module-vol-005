@@ -1,0 +1,11 @@
+// cl-geom-point-in-bbox-stage-68: Test Suite
+import "../gm_bx_68.zk"
+
+fn test_run():
+    res := point_in_bbox_68(10, 20, 0, 50, 0, 50)
+    if res != 68: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geom-point-in-bbox-stage-68!")

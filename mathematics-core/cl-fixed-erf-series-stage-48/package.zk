@@ -1,0 +1,10 @@
+// cl-fixed-erf-series-stage-48 Package Manifest
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+name := "cl-fixed-erf-series-stage-48"
+version := "0.1.0"
+description := "Gauss Error Function Series Stage 48"
+main := "erf_s_48.zk"
+license := "CCFL-2.0"
+author := "zk-mohammad <ZaidKhan-alamgir@proton.me>"

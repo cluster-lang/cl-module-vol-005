@@ -1,0 +1,7 @@
+// cl-fixed-q2-30-div: Fixed-Point Q2-30 Division
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q2_30_div(a: int, b: int) -> int:
+    if b == 0: return 0
+    return (a << 30) / b

@@ -1,0 +1,11 @@
+// cl-geom2d-point-in-circle: Test Suite
+import "../pt_circ.zk"
+
+fn test_pic():
+    if point_in_circle2d([1.0, 1.0], [0.0, 0.0], 2.0) != 1: sys_exit(1)
+    if point_in_circle2d([3.0, 3.0], [0.0, 0.0], 2.0) != 0: sys_exit(1)
+    print("test_pic passed")
+
+fn main():
+    test_pic()
+    print("✓ All tests passed for cl-geom2d-point-in-circle!")

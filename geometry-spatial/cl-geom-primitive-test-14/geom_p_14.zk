@@ -1,0 +1,6 @@
+// cl-geom-primitive-test-14: Geometric Parameter Evaluation Primitive Step 14
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn geom_primitive_eval_14(v: float) -> float:
+    return v * 14.0

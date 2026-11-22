@@ -1,0 +1,14 @@
+// cl-geom3d-plane-plane-angle-cos: Test Suite
+import "../pln_cos.zk"
+
+fn test_ppa():
+    p1: vector[float] := [0.0, 1.0, 0.0, 0.0]
+    p2: vector[float] := [0.0, 1.0, 0.0, 5.0]
+    diff := planes_cos_angle(p1, p2) - 1.0
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.0001: sys_exit(1)
+    print("test_ppa passed")
+
+fn main():
+    test_ppa()
+    print("✓ All tests passed for cl-geom3d-plane-plane-angle-cos!")

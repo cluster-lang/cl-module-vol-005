@@ -1,0 +1,9 @@
+// cl-fixed-saturated-acc-stage-1: Saturated Integer Accumulator Stage 1
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sat_acc_1(a: int, b: int) -> int:
+    sum := a + b
+    if sum > 1000: return 1000
+    if sum < (0 - 1000): return (0 - 1000)
+    return sum

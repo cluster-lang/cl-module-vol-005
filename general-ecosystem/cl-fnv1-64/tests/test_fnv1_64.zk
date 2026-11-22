@@ -1,0 +1,11 @@
+// cl-fnv1-64: Test Suite
+import "../fnv1_64.zk"
+
+fn test_fnv1_64():
+    h := fnv1_64("cluster")
+    if h != 7372299674000701269: sys_exit(1) // 0x664FAB7E4E8A3755
+    print("test_fnv1_64 passed: 64-bit FNV-1 multiply-first hash verified")
+
+fn main():
+    test_fnv1_64()
+    print("✓ All tests passed for cl-fnv1-64!")

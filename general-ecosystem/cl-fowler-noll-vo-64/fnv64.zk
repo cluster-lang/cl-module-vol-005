@@ -1,0 +1,16 @@
+// cl-fowler-noll-vo-64: Fowler-Noll-Vo 64-bit FNV-1a Hash Engine
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn fnv1a_64(s: string) -> int:
+    // 14695981039346656037 in signed 64-bit is -3750763034362895579
+    h := -3750763034362895579
+    prime := 1099511628211
+    i := 0
+    slen := len(s)
+    while i < slen:
+        b := byte_at(s, i) & 255
+        h = h ^ b
+        h = h * prime
+        i = i + 1
+    return h

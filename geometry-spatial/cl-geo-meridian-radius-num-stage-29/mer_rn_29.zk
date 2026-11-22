@@ -1,0 +1,6 @@
+// cl-geo-meridian-radius-num-stage-29: Meridian Radius of Curvature Numerator Stage 29
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn meridian_radius_num_29(a_axis: float, ecc_sq: float) -> float:
+    return a_axis * (1.0 - ecc_sq) * 29.0

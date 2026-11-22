@@ -1,0 +1,13 @@
+// cl-fixed-erf-series-stage-45: Test Suite
+import "../erf_s_45.zk"
+
+fn test_run():
+    res := erf_series_45(0.5)
+    diff := res - 23.2733
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-erf-series-stage-45!")

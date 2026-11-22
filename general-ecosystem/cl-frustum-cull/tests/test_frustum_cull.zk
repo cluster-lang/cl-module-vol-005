@@ -1,0 +1,14 @@
+// cl-frustum-cull: Test Suite
+import "../frustum_cull.zk"
+
+fn test_frustum():
+    // Plane facing +Z at z=0 (nx=0, ny=0, nz=1, d=0)
+    in_box := plane_aabb_inside(0.0, 0.0, 1.0, 0.0, -1.0, -1.0, 1.0, 1.0, 1.0, 2.0)
+    if in_box != 1: sys_exit(1)
+    out_box := plane_aabb_inside(0.0, 0.0, 1.0, 0.0, -1.0, -1.0, -5.0, 1.0, 1.0, -2.0)
+    if out_box != 0: sys_exit(1)
+    print("test_frustum passed: frustum culling plane test verified")
+
+fn main():
+    test_frustum()
+    print("✓ All tests passed for cl-frustum-cull!")

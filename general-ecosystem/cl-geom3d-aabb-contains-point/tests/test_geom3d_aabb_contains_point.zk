@@ -1,0 +1,13 @@
+// cl-geom3d-aabb-contains-point: Test Suite
+import "../aabb_pt.zk"
+
+fn test_aabp():
+    min_pt: vector[float] := [0.0, 0.0, 0.0]
+    max_pt: vector[float] := [5.0, 5.0, 5.0]
+    if aabb3d_contains_point([2.0, 3.0, 4.0], min_pt, max_pt) != 1: sys_exit(1)
+    if aabb3d_contains_point([6.0, 3.0, 4.0], min_pt, max_pt) != 0: sys_exit(1)
+    print("test_aabp passed")
+
+fn main():
+    test_aabp()
+    print("✓ All tests passed for cl-geom3d-aabb-contains-point!")

@@ -1,0 +1,15 @@
+// cl-fnv1: Fowler-Noll-Vo FNV-1 Non-Cryptographic Hash Engine
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn fnv1_32(s: string) -> int:
+    mask32 := 4294967295
+    h := 2166136261 // FNV-1 offset basis
+    prime := 16777619 // FNV-1 prime
+    i := 0
+    slen := len(s)
+    while i < slen:
+        h = (h * prime) & mask32
+        h = (h ^ byte_at(s, i)) & mask32
+        i = i + 1
+    return h

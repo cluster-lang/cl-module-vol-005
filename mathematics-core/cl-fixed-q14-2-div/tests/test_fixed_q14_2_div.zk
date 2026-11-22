@@ -1,0 +1,11 @@
+// cl-fixed-q14-2-div: Test Suite
+import "../q14_2_div.zk"
+
+fn test_run():
+    res := q14_2_div(24, 8)
+    if res != 12: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q14-2-div!")

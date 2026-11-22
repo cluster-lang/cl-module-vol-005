@@ -1,0 +1,13 @@
+// cl-geom-bezier-quad-point-36: Test Suite
+import "../bez_q_36.zk"
+
+fn test_run():
+    res := bezier_quad_eval_36(0.0, 36.00, 10.0, 0.5)
+    diff := res - 20.5000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geom-bezier-quad-point-36!")

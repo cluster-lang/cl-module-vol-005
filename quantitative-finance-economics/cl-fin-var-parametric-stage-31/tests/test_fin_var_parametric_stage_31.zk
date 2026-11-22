@@ -1,0 +1,13 @@
+// cl-fin-var-parametric-stage-31: Test Suite
+import "../var_p_31.zk"
+
+fn test_run():
+    res := var_parametric_31(0.02, 100000.0)
+    diff := res - 3600.0000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fin-var-parametric-stage-31!")

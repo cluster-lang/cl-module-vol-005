@@ -1,0 +1,11 @@
+// cl-fixed-q4-12-from-int: Test Suite
+import "../q4_fi.zk"
+
+fn test_run():
+    res := q4_from_int(3)
+    if res != 12288: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q4-12-from-int!")

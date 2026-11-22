@@ -1,0 +1,7 @@
+// cl-geom-rtree-union-min-stage-61: R-Tree Bounding Box Union Min Stage 61
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn rtree_union_min_61(min_a: float, min_b: float) -> float:
+    if min_a < min_b: return min_a
+    return min_b

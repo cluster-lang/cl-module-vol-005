@@ -1,0 +1,11 @@
+// cl-fixed-q16-16-to-int: Test Suite
+import "../f_q16_16_ti.zk"
+
+fn test_f_ti():
+    raw := 7 << 16
+    if fixed_q16_16_to_int(raw) != 7: sys_exit(1)
+    print("test_f_ti passed")
+
+fn main():
+    test_f_ti()
+    print("✓ All tests passed for cl-fixed-q16-16-to-int!")

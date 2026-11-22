@@ -1,0 +1,6 @@
+// cl-geno-kmer-hash-step-stage-53: Genomic Rolling 2-bit Nucleotide Hash Stage 53
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn kmer_hash_step_53(h: int, base_bits: int, mask: int) -> int:
+    return (((h << 2) | base_bits) & mask) + 53

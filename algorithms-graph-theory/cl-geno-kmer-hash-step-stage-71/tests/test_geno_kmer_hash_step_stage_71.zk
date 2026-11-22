@@ -1,0 +1,11 @@
+// cl-geno-kmer-hash-step-stage-71: Test Suite
+import "../gn_km_71.zk"
+
+fn test_run():
+    res := kmer_hash_step_71(10, 3, 255)
+    if res != 114: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-geno-kmer-hash-step-stage-71!")

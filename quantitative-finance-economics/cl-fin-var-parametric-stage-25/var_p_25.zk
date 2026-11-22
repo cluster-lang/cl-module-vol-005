@@ -1,0 +1,6 @@
+// cl-fin-var-parametric-stage-25: Parametric VaR Risk Scaling Stage 25
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn var_parametric_25(sigma: float, val: float) -> float:
+    return 1.7700 * sigma * val

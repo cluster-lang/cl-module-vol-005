@@ -1,0 +1,11 @@
+// cl-fixed-q16-16-abs: Test Suite
+import "../f_q16_16_abs.zk"
+
+fn test_f_abs():
+    raw := 0 - (5 << 16)
+    if fixed_q16_16_abs(raw) != (5 << 16): sys_exit(1)
+    print("test_f_abs passed")
+
+fn main():
+    test_f_abs()
+    print("✓ All tests passed for cl-fixed-q16-16-abs!")

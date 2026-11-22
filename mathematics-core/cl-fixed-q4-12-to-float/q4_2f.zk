@@ -1,0 +1,6 @@
+// cl-fixed-q4-12-to-float: Q4.12 Fixed-Point to Float Converter
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q4_to_float(x: int) -> float:
+    return float(x) / 4096.0

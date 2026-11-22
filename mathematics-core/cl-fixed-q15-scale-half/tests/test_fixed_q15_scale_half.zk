@@ -1,0 +1,11 @@
+// cl-fixed-q15-scale-half: Test Suite
+import "../q15_half.zk"
+
+fn test_run():
+    res := q15_half(16384)
+    if res != 8192: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q15-scale-half!")

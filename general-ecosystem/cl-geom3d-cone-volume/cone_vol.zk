@@ -1,0 +1,7 @@
+// cl-geom3d-cone-volume: 3D Cone Volume Evaluator
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn cone_volume(r: float, h: float) -> float:
+    pi := 3.14159265
+    return (1.0 / 3.0) * pi * r * r * h

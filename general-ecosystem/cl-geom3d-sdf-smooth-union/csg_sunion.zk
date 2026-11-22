@@ -1,0 +1,10 @@
+// cl-geom3d-sdf-smooth-union: Polynomial Smooth Union of Two Signed Distance Fields
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sdf_smooth_union(d1: float, d2: float, k: float) -> float:
+    if k <= 0.000001: return d1
+    h := 0.5 + 0.5 * (d2 - d1) / k
+    if h < 0.0: h = 0.0
+    if h > 1.0: h = 1.0
+    return (d2 * (1.0 - h) + d1 * h) - k * h * (1.0 - h)

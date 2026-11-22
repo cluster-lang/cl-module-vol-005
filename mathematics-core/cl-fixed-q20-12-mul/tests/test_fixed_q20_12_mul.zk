@@ -1,0 +1,11 @@
+// cl-fixed-q20-12-mul: Test Suite
+import "../q20_12_mul.zk"
+
+fn test_run():
+    res := q20_12_mul(8192, 12288)
+    if res != 24576: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q20-12-mul!")

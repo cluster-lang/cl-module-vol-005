@@ -1,0 +1,11 @@
+// cl-fixed-q8-24-to-int: Test Suite
+import "../q8_24_2i.zk"
+
+fn test_run():
+    res := q8_24_to_int(67108865)
+    if res != 4: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q8-24-to-int!")

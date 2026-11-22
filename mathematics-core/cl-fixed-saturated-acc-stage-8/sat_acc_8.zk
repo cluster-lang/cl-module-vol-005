@@ -1,0 +1,9 @@
+// cl-fixed-saturated-acc-stage-8: Saturated Integer Accumulator Stage 8
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn sat_acc_8(a: int, b: int) -> int:
+    sum := a + b
+    if sum > 8000: return 8000
+    if sum < (0 - 8000): return (0 - 8000)
+    return sum

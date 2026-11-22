@@ -1,0 +1,6 @@
+name: "cl-fs"
+version: "0.1.0"
+description: "File system operations for cluster-lang"
+license: "MIT-Conditional"
+author: "Cluster Authors"
+dependencies: []

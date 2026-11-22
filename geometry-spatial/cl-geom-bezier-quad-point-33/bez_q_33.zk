@@ -1,0 +1,7 @@
+// cl-geom-bezier-quad-point-33: 2D Quadratic Bezier Midpoint Stage 33
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn bezier_quad_eval_33(p0: float, p1: float, p2: float, t: float) -> float:
+    omt := 1.0 - t
+    return omt * omt * p0 + 2.0 * omt * t * p1 + t * t * p2

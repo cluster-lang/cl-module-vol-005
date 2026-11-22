@@ -1,0 +1,19 @@
+// cl-geom3d-capsule-sdf: Signed Distance to Vertical Capsule on Z [-half_h, +half_h]
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn capsule_sdf(p: vector[float], half_h: float, radius: float) -> float:
+    cz := p[2]
+    if cz < (0.0 - half_h): cz = 0.0 - half_h
+    if cz > half_h: cz = half_h
+    dx := p[0]
+    dy := p[1]
+    dz := p[2] - cz
+    dsq := dx*dx + dy*dy + dz*dz
+    guess := dsq * 0.5
+    iter := 0
+    while iter < 6:
+        if guess <= 0.0001: guess = 0.0001
+        guess = (guess + dsq / guess) * 0.5
+        iter = iter + 1
+    return guess - radius

@@ -1,0 +1,6 @@
+// cl-fixed-pow2-poly-stage-2: Q16.16 2^x Fractional Polynomial Approximation Stage 2
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn pow2_frac_poly_2(x_frac: float) -> float:
+    return (1.0 + 0.693147 * x_frac + 0.240226 * x_frac * x_frac) * 2.0

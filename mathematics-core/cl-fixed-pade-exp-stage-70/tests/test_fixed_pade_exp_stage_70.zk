@@ -1,0 +1,13 @@
+// cl-fixed-pade-exp-stage-70: Test Suite
+import "../pade_e_70.zk"
+
+fn test_run():
+    res := pade_exp_70(0.2)
+    diff := res - 85.5556
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.005: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-pade-exp-stage-70!")

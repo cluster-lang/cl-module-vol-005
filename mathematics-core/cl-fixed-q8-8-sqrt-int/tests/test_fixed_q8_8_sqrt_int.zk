@@ -1,0 +1,11 @@
+// cl-fixed-q8-8-sqrt-int: Test Suite
+import "../q8_sqrt.zk"
+
+fn test_run():
+    res := q8_sqrt(256 * 4)
+    if res != 512: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q8-8-sqrt-int!")

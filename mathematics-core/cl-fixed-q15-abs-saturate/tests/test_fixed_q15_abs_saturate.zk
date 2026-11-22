@@ -1,0 +1,11 @@
+// cl-fixed-q15-abs-saturate: Test Suite
+import "../q15_abss.zk"
+
+fn test_run():
+    res := q15_abs_saturate(-32768)
+    if res != 32767: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-fixed-q15-abs-saturate!")

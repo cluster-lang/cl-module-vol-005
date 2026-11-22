@@ -1,0 +1,8 @@
+// cl-fixed-q24-8-clamp: Q24.8 Fixed-Point Interval Clamp
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn q24_clamp(x: int, min_val: int, max_val: int) -> int:
+    if x < min_val: return min_val
+    if x > max_val: return max_val
+    return x

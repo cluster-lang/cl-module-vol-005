@@ -1,0 +1,7 @@
+// cl-geom2d-segment-length-sq: 2D Line Segment Length Squared
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn segment2d_length_sq(p0: vector[float], p1: vector[float]) -> float:
+    dx := p1[0] - p0[0]; dy := p1[1] - p0[1]
+    return dx * dx + dy * dy

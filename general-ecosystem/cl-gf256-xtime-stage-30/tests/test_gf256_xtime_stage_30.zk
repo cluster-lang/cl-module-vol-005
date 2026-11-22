@@ -1,0 +1,11 @@
+// cl-gf256-xtime-stage-30: Test Suite
+import "../gf_xt_30.zk"
+
+fn test_run():
+    res := gf256_xtime_30(142)
+    if res != 7: sys_exit(1)
+    print("test passed")
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-gf256-xtime-stage-30!")
